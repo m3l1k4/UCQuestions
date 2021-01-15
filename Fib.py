@@ -4,19 +4,18 @@
 #  or "while" loops. (Feel free to use the space 
 #  below or submit a link to your work.)
 
-
-import sys
-
-NUM=8
-
 def fib(NUM):
     if NUM <= 1:
-        return n
-     return fib(n-1) + fib(n-2)
-
+        return NUM
+    return fib(NUM-1) + fib(NUM-2)
 
 def main():
+    NUM=1
+    fibNum=fib(NUM)
+    print("nth Fib number is: ", fibNum)
 
+
+main()
 
 
 
