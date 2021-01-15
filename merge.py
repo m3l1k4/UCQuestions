@@ -1,10 +1,6 @@
-
-# Write an immutable function that merges the following inputs into a single list. (Feel free to use the space below or submit a link to your work.)
-
-# Inputs
-# - Original list of strings
-# - List of strings to be added
-# - List of strings to be removed
+#Author: Melika Salehi
+#Date: January 14, 2021
+#This is in Python3
 
 OriginalList = ["one", "two", "three","seven"]
 ListAdd = ["one", "two", "five", "six"]
@@ -17,8 +13,6 @@ def Compare(lsta,lstb):
     new_lstb=list(set(lstb)- set(lsta))
     return new_lsta,new_lstb
 
-
-
 def Sorting(lst):
 
     #List shall only contain unique values
@@ -30,9 +24,6 @@ def Sorting(lst):
     # --- Most character count to least character count
     lstSorted= sorted(lst, key=len, reverse=True)
 
-    
-    print(lstSorted)
-    
     return lstSorted
 
 
@@ -47,29 +38,10 @@ def main():
     #send to be sorted and duplicates removed
     lstSorted=Sorting(mergedLists)
 
-
+    print(lstSorted)
  
-
-
 main()
 
 
-
-# Return
-
-# - List shall be ordered as follows
-
-
-
-# Other Notes
-# - You can use any programming language you like
-# - The function you submit shall be runnable
-
-# For example:
-
-# Original List = ['one', 'two', 'three',]
-# Add List = ['one', 'two', 'five', 'six]
-# Delete List = ['two', 'five']
-#Result List = ['three', 'six', 'one'] 
 
 
