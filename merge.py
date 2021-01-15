@@ -6,7 +6,7 @@
 # - List of strings to be added
 # - List of strings to be removed
 
-OriginalList = ["one", "two", "three"]
+OriginalList = ["one", "two", "three","seven"]
 ListAdd = ["one", "two", "five", "six"]
 DeleteList = ["two", "five"]
 
@@ -15,9 +15,6 @@ def Compare(lsta,lstb):
 # compare and removes common value between 2 lists
     new_lsta= list(set(lsta) - set(lstb))
     new_lstb=list(set(lstb)- set(lsta))
-    # print(new_lsta,"new_lsta")
-    # print(new_lstb,"new_lstb")
-
     return new_lsta,new_lstb
 
 
@@ -25,44 +22,33 @@ def Compare(lsta,lstb):
 def Sorting(lst):
 
     #List shall only contain unique values
-    uniqueList=list(dict.fromkeys(lst))
+    lst=list(set(lst))
 
    # --- In the event of a tie, reverse alphabetical
     lst.sort(reverse=True)
     
     # --- Most character count to least character count
     lstSorted= sorted(lst, key=len, reverse=True)
-    lstSorted=list(set(lstSorted))
+
+    
+    print(lstSorted)
     
     return lstSorted
 
 
 def main():
  
-    #passing to remove shared values between the add list and delete list.
+    #passing to remove shared values between the original list and delete list.
     UpdatedOrginialList,a = Compare(OriginalList,DeleteList)
+    #passing to remove shared values between the add list and delete list.
     AddListNew,DeleteListNew=Compare(ListAdd, DeleteList)
-    print(AddListNew,"newaddlist")
-    print(DeleteListNew,"newdeletelist")
-    #now that we have unique values both in add list and delete list, 
-    # we're gonna delete the desired values fromt he original list
-   
-    print(UpdatedOrginialList,"original list with removed values")
- 
-
-  
+    #merge original and new  
     mergedLists= UpdatedOrginialList+AddListNew
-
-
-    print(mergedLists, "merged")
-
-
+    #send to be sorted and duplicates removed
     lstSorted=Sorting(mergedLists)
 
-    
- 
 
-    print(lstSorted)
+ 
 
 
 main()
