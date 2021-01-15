@@ -44,4 +44,13 @@ main()
 
 
 
+#Inputs
+# - Original list of strings
+# - List of strings to be added
+# - List of strings to be removed
 
+# Return
+# - List shall only contain unique values
+# - List shall be ordered as follows
+# --- Most character count to least character count
+# --- In the event of a tie, reverse alphabetical

@@ -15,3 +15,7 @@ def main():
 
 main()
 
+
+# function that calculates the 
+# nth Fibonacci number in O(n) 
+# time or better without using any "for"
