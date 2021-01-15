@@ -1,8 +1,6 @@
-# Write a function that calculates the 
-# nth Fibonacci number in O(n) 
-# time or better without using any "for"
-#  or "while" loops. (Feel free to use the space 
-#  below or submit a link to your work.)
+#Author: Melika Salehi
+#Date: January 14, 2021
+#This is in Python3
 
 def fib(NUM):
     if NUM <= 1:
